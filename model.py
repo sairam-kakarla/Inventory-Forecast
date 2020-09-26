@@ -21,9 +21,6 @@ class model:
         print(self.data_frame)
         
             
-
-
-
     def train_model(self,split):
         self.regressor=LinearRegression()
         if split!=0:
