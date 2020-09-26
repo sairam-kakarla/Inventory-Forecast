@@ -1,6 +1,0 @@
-rice_rack=space("rice",100)
-    rice1=item("rice","Pusa",4500,4200,5,25)
-    rice2=item("rice","Sella",4400,4000,3,20)
-    rice3=item("rice","Steam",4700,4500,3,25)
-    rice4=item("rice","Golden Sella",3600,3000,0,30)
-    rice5=item("rice","Golden Steam",2300,2000,10,30)
