@@ -1,19 +1,19 @@
 #Storage Volume Estimation based on profit 
 class item:
     
-    def __init__(self,name,brand,SP,CP,discount,stock):
+    def __init__(self,name,brand,MP,CP,discount,stock):
         self.name=name
         self.brand=brand
         self.CP=CP
         self.discount=discount
-        self.SP=SP
+        self.MP=MP
         self.stock=stock
     
     def profit_percent(self):
-        return(((self.SP*(1-(self.discount/100))-self.CP))/self.CP)
+        return(((self.MP*(1-(self.discount/100))-self.CP))/self.CP)
     
     def profit(self):
-        return(round(self.SP*(1-self.discount/100)-self.CP,5))
+        return(round(self.MP*(1-self.discount/100)-self.CP,5))
 
 class space:
     def __init__(self,name,capacity):
@@ -56,16 +56,6 @@ class Rack_Maxim:
             print(i," stock: ",log[i][0]," cost price: ",log[i][1])
         print("Total cost price: ",total_CP)
         print("Maximum profit estimated: ",max_profit)
-
-            
-
-
-            
-
-
-        
-
-
 
 '''Some random test cases
 Need to create a proper interface for input and connection with models.py for
