@@ -33,7 +33,8 @@ class model:
 
 if __name__=='__main__':
     model1=model()
-    model1.load_data("S:/materials/fall2020/cse2003/project/2003proj/jan2020.csv")
+    #file location 
+    #model1.load_data()
     model1.train_model(0.9)
     model1.predict_model(None)
 
