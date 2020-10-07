@@ -17,8 +17,14 @@ class model:
         if data!=None:
             self.x_test=pd.DataFrame(data)
         self.predict_data=self.regressor.predict(self.x_test)
-        self.data_frame=pd.DataFrame({'Actual Price':self.y_test,"Predicted Price":self.predict_data})
-        print(self.data_frame)
+        if data==None:
+            self.data_frame=pd.DataFrame({'Actual Price':self.y_test,"Predicted Price":self.predict_data})
+            print(self.data_frame)
+            print(self.regressor.score(self.x_test,self.y_test))
+            self.data_frame.plot(kind='bar')
+            plt.show()
+        else:
+            print("Estimated Value: ",int(self.predict_data[0]))
         
             
     def train_model(self,split):
@@ -33,23 +39,12 @@ class model:
 
 if __name__=='__main__':
     model1=model()
-    #file location 
-    #model1.load_data()
-    model1.train_model(0.9)
-    model1.predict_model(None)
+    file_location="S:/materials/fall2020/cse2003/project/2003proj/jan2020.csv" 
+    # model1.load_data(file_location)
+    # model1.train_model(0.9)
+    # model1.predict_model(None)
+    # model2=model()
+    # model2.load_data(file_location)
+    # model2.train_model(0)
+    # model2.predict_model([[6,1,1,4]])
 
-
-
-
-
-
-
-
-
-
-
-'''
-predict=regressor.predict(x_test)
-df=pd.DataFrame({'Actual Quantity':y_test,'Predicted Quantity':predict})
-print(regressor.score(x_test,y_test))
-'''
